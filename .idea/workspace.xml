@@ -5,21 +5,542 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="46816c89-bf3d-4b94-847e-cf7e550bdf8c" name="Changes" comment="test">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/do_an_thang/domain/data/TokenInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/do_an_thang/domain/dtos/AccountUpdateDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/do_an_thang/domain/dtos/LoginDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/do_an_thang/domain/entities/Account.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/do_an_thang/domain/entities/BaseEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/do_an_thang/domain/entities/type/AccountState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/do_an_thang/domain/entities/type/AcountType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/do_an_thang/domain/entities/type/Gender.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/do_an_thang/domain/repositories/AccountRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/do_an_thang/domain/responses/JwtResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/do_an_thang/domain/security/UserDetailsImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/do_an_thang/domain/services/AuthenService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/do_an_thang/domain/controllers/AuthenController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/do_an_thang/domain/controllers/HomeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/do_an_thang/domain/dtos/CartProductDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/do_an_thang/domain/dtos/CategoryDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/do_an_thang/domain/dtos/CreateUserDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/do_an_thang/domain/entities/Cart.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/do_an_thang/domain/entities/Category.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/do_an_thang/domain/entities/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/do_an_thang/domain/entities/type/CategoryState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/do_an_thang/domain/entities/type/ProductState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/do_an_thang/domain/exceptions/AccessError.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/do_an_thang/domain/exceptions/AccountNotExistsException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/do_an_thang/domain/exceptions/BadRequestException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/do_an_thang/domain/exceptions/GlobalExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/do_an_thang/domain/exceptions/NotAuthorizedException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/do_an_thang/domain/exceptions/ParamInvalidExcetion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/do_an_thang/domain/exceptions/PromotionException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/do_an_thang/domain/exceptions/RequestFailedException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/do_an_thang/domain/exceptions/ResourceFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/do_an_thang/domain/exceptions/ResourceNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/do_an_thang/domain/exceptions/UnauthorizedException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/do_an_thang/domain/exceptions/WrongAccountOrPasswordException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/do_an_thang/domain/exceptions/info/BaseException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/do_an_thang/domain/exceptions/info/ErrorCode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/do_an_thang/domain/exceptions/info/ExceptionResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/do_an_thang/domain/repositories/CartRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/do_an_thang/domain/repositories/CategoryRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/do_an_thang/domain/repositories/ProductRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/do_an_thang/domain/responses/CartResonse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/do_an_thang/domain/responses/HomeProductResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/do_an_thang/domain/services/CartService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/do_an_thang/domain/services/CategoryService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/do_an_thang/domain/services/ProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/corporate/css/custom.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/corporate/css/style-responsive.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/corporate/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/corporate/css/themes/blue.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/corporate/css/themes/gray.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/corporate/css/themes/green.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/corporate/css/themes/orange.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/corporate/css/themes/red.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/corporate/css/themes/turquoise.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/corporate/img/Thumbs.db" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/corporate/img/blockquote-corner-another-color.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/corporate/img/blockquote-corner.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/corporate/img/fa-angle-brands.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/corporate/img/fa-angle-down-langs.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/corporate/img/fa-angles.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/corporate/img/icon-color-close.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/corporate/img/icon-color.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/corporate/img/icons/Thumbs.db" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/corporate/img/icons/add-goods.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/corporate/img/icons/del-goods.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/corporate/img/icons/search-icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/corporate/img/icons/shop-cart-icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/corporate/img/icons/sidebar-toggle-icons.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/corporate/img/icons/toggler.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/corporate/img/icons/top-search-icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/corporate/img/layerslider-arrows.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/corporate/img/logos/0logo-blue-small.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/corporate/img/logos/0logo-blue.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/corporate/img/logos/0logo-green.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/corporate/img/logos/0logo-orange.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/corporate/img/logos/Thumbs.db" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/corporate/img/logos/logo-corp-blue.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/corporate/img/logos/logo-corp-gray.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/corporate/img/logos/logo-corp-green.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/corporate/img/logos/logo-corp-orange.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/corporate/img/logos/logo-corp-red.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/corporate/img/logos/logo-corp-turquoise.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/corporate/img/logos/logo-red.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/corporate/img/logos/logo-shop-blue.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/corporate/img/logos/logo-shop-gray.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/corporate/img/logos/logo-shop-green.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/corporate/img/logos/logo-shop-orange.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/corporate/img/logos/logo-shop-red.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/corporate/img/logos/logo-shop-turquoise.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/corporate/img/logos/shop-logo-red.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/corporate/img/new.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/corporate/img/payments/MasterCard.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/corporate/img/payments/PayPal.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/corporate/img/payments/Thumbs.db" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/corporate/img/payments/american-express.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/corporate/img/payments/fa-angle-right-info.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/corporate/img/payments/visa.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/corporate/img/payments/western-union.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/corporate/img/sale.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/corporate/img/step3-angle-right.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/corporate/img/syncfusion-icons-white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/corporate/img/syncfusion-icons.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/corporate/img/up.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/corporate/scripts/back-to-top.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/corporate/scripts/layout.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/css/animate.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/css/components.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/css/gallery.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/css/portfolio.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/css/slider.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/css/style-shop.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/Thumbs.db" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/brands/Thumbs.db" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/brands/canon.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/brands/esprit.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/brands/gap.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/brands/next.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/brands/puma.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/brands/zara.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/careers/Thumbs.db" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/careers/careers.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/cart-img.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/clients/Thumbs.db" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/clients/client_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/clients/client_1_gray.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/clients/client_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/clients/client_2_gray.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/clients/client_3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/clients/client_3_gray.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/clients/client_4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/clients/client_4_gray.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/clients/client_5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/clients/client_5_gray.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/clients/client_6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/clients/client_6_gray.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/clients/client_7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/clients/client_7_gray.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/clients/client_8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/clients/client_8_gray.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/fa-angle-brands.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/fa-angles.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/frontend-slider/Thumbs.db" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/frontend-slider/bg1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/frontend-slider/bg1_BK.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/frontend-slider/bg2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/frontend-slider/bg2_BK.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/frontend-slider/bg3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/frontend-slider/bg4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/frontend-slider/bg5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/frontend-slider/bg8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/frontend-slider/bg9.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/frontend-slider/bg9_BK.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/frontend-slider/hint1-blue.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/frontend-slider/hint1-green.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/frontend-slider/hint1-orange.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/frontend-slider/hint1-red.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/frontend-slider/hint2-blue.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/frontend-slider/hint2-green.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/frontend-slider/hint2-orange.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/frontend-slider/hint2-red.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/frontend-slider/ipad.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/frontend-slider/ipadmini.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/frontend-slider/iphone.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/frontend-slider/iphone_large.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/frontend-slider/iphone_left.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/frontend-slider/iphone_right.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/frontend-slider/mac.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/frontend-slider/macbook.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/frontend-slider/thumbs/Thumbs.db" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/frontend-slider/thumbs/thumb1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/frontend-slider/thumbs/thumb2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/frontend-slider/thumbs/thumb3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/frontend-slider/thumbs/thumb4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/frontend-slider/thumbs/thumb5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/frontend-slider/thumbs/thumb6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/frontend-slider/thumbs/thumb7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/icon-color-close.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/icon-color.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/icons/Thumbs.db" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/icons/add-goods.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/icons/del-goods.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/icons/search-icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/icons/shop-cart-icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/icons/sidebar-toggle-icons.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/icons/toggler.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/icons/top-search-icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/img1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/img3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/index-sliders/Thumbs.db" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/index-sliders/slide1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/index-sliders/slide2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/index-sliders/slide3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/new.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/people/Thumbs.db" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/people/img1-large.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/people/img1-small.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/people/img2-large.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/people/img2-small.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/people/img3-large.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/people/img3-small.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/people/img4-large.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/people/img4-small.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/people/img5-large.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/people/img5-small.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/people/img6-large.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/people/img6-small.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/people/img7-large.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/people/img7-small.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/people/img8-large.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/people/img8-small.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/photos/Thumbs.db" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/photos/img1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/photos/img2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/photos/img3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/photos/img4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/photos/img5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/photos/img6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/pics/Thumbs.db" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/pics/img1-large.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/pics/img1-medium.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/pics/img2-large.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/pics/img2-large_bk.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/pics/img2-medium.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/pics/img2-medium_bk.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/posts/Thumbs.db" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/posts/img1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/posts/img2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/posts/img3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/product1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/product1big.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/products/Thumbs.db" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/products/k1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/products/k2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/products/k3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/products/k4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/products/model1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/products/model2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/products/model3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/products/model4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/products/model5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/products/model6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/products/model7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/products/p1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/products/p2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/products/p3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/products/p4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/products/p5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/products/p6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/products/p7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/sale.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/shop-slider/slide1/Thumbs.db" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/shop-slider/slide1/bg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/shop-slider/slide2/Thumbs.db" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/shop-slider/slide2/bg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/shop-slider/slide2/price.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/shop-slider/slide3/Thumbs.db" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/shop-slider/slide3/bg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/shop-slider/slide4/Thumbs.db" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/shop-slider/slide4/bg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/shop-slider/slide4/buy.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/shop-slider/slide4/price.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/shop-slider/slide4/title.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/social/Thumbs.db" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/social/aboutme.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/social/amazon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/social/behance.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/social/blogger.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/social/deviantart.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/social/dribbble.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/social/dropbox.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/social/evernote.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/social/facebook.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/social/flickr.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/social/forrst.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/social/foursquare.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/social/github.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/social/googleplus.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/social/gravatar.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/social/instagram.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/social/jolicloud.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/social/klout.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/social/last-fm.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/social/linkedin.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/social/myspace.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/social/picasa.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/social/pintrest.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/social/quora.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/social/reddit.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/social/rss.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/social/skype.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/social/spotify.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/social/stumbleupon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/social/tumblr.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/social/twitter.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/social/vimeo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/social/vk.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/social/wordpress.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/social/xing.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/social/yahoo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/social/youtube.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/step3-angle-right.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/title-bg/1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/title-bg/Thumbs.db" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/title-bg/man.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/title-bg/woman.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/works/Thumbs.db" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/works/img1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/works/img2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/works/img3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/works/img4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/works/img5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/img/works/img6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/scripts/bs-carousel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/scripts/checkout.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/scripts/contact-us.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/pages/scripts/portfolio.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/bootstrap-touchspin/LICENSE.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/bootstrap-touchspin/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/bootstrap-touchspin/bootstrap.touchspin.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/bootstrap-touchspin/bootstrap.touchspin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/bootstrap-touchspin/bootstrap.touchspin.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/bootstrap-touchspin/bootstrap.touchspin.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/bootstrap/css/bootstrap-theme.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/bootstrap/css/bootstrap-theme.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/bootstrap/css/bootstrap-theme.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/bootstrap/css/bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/bootstrap/css/bootstrap.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/bootstrap/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/bootstrap/fonts/glyphicons-halflings-regular.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/bootstrap/fonts/glyphicons-halflings-regular.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/bootstrap/fonts/glyphicons-halflings-regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/bootstrap/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/bootstrap/fonts/glyphicons-halflings-regular.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/bootstrap/js/bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/bootstrap/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/bootstrap/js/npm.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/excanvas.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/fancybox/.gitattributes" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/fancybox/CHANGELOG.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/fancybox/CHANGELOG.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/fancybox/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/fancybox/README.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/fancybox/demo/1_b.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/fancybox/demo/1_s.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/fancybox/demo/2_b.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/fancybox/demo/2_s.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/fancybox/demo/3_b.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/fancybox/demo/3_s.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/fancybox/demo/4_b.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/fancybox/demo/4_s.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/fancybox/demo/5_b.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/fancybox/demo/5_s.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/fancybox/demo/ajax.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/fancybox/demo/iframe.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/fancybox/demo/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/fancybox/lib/jquery-1.8.2.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/fancybox/lib/jquery.mousewheel-3.0.6.pack.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/fancybox/source/blank.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/fancybox/source/fancybox_loading.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/fancybox/source/fancybox_overlay.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/fancybox/source/fancybox_sprite.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/fancybox/source/helpers/fancybox_buttons.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/fancybox/source/helpers/jquery.fancybox-buttons.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/fancybox/source/helpers/jquery.fancybox-buttons.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/fancybox/source/helpers/jquery.fancybox-media.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/fancybox/source/helpers/jquery.fancybox-thumbs.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/fancybox/source/helpers/jquery.fancybox-thumbs.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/fancybox/source/jquery.fancybox.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/fancybox/source/jquery.fancybox.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/fancybox/source/jquery.fancybox.pack.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/font-awesome/css/font-awesome.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/font-awesome/css/font-awesome.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/font-awesome/fonts/FontAwesome.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/font-awesome/fonts/fontawesome-webfont.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/font-awesome/fonts/fontawesome-webfont.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/font-awesome/fonts/fontawesome-webfont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/font-awesome/fonts/fontawesome-webfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/font-awesome/fonts/fontawesome-webfont.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/font-awesome/less/animated.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/font-awesome/less/bordered-pulled.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/font-awesome/less/core.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/font-awesome/less/fixed-width.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/font-awesome/less/font-awesome.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/font-awesome/less/icons.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/font-awesome/less/larger.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/font-awesome/less/list.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/font-awesome/less/mixins.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/font-awesome/less/path.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/font-awesome/less/rotated-flipped.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/font-awesome/less/stacked.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/font-awesome/less/variables.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/font-awesome/scss/_animated.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/font-awesome/scss/_bordered-pulled.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/font-awesome/scss/_core.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/font-awesome/scss/_fixed-width.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/font-awesome/scss/_icons.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/font-awesome/scss/_larger.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/font-awesome/scss/_list.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/font-awesome/scss/_mixins.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/font-awesome/scss/_path.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/font-awesome/scss/_rotated-flipped.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/font-awesome/scss/_stacked.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/font-awesome/scss/_variables.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/font-awesome/scss/font-awesome.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/gmaps/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/gmaps/gmaps.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/gmaps/gmaps.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/holder.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/jquery-migrate.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/jquery-mixitup/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/jquery-mixitup/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/jquery-mixitup/bower.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/jquery-mixitup/jquery.mixitup.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/jquery-mixitup/mixitup.jquery.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/jquery-slimscroll/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/jquery-slimscroll/jquery.slimscroll.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/jquery-slimscroll/jquery.slimscroll.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/jquery-slimscroll/slimScroll.jquery.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/jquery.blockui.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/jquery.cokie.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/jquery.easing.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/jquery.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/jquery.min.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/jquery.parallax.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/jquery.scrollTo.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/moment.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/owl.carousel/assets/owl.carousel.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/owl.carousel/owl.carousel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/owl.carousel/owl.carousel.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/rateit/example/content/antenna-black.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/rateit/example/content/antenna-red.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/rateit/example/content/antenna-yellow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/rateit/example/content/antenna.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/rateit/example/content/bigstars.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/rateit/example/content/star-black32.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/rateit/example/content/star-gold32.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/rateit/example/content/star-red32.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/rateit/example/content/star-white32.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/rateit/example/content/star_2.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/rateit/example/content/star_3.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/rateit/example/content/star_4.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/rateit/example/example.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/rateit/example/rateit.aspx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/rateit/example/sh/shBrushCSharp.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/rateit/example/sh/shBrushCss.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/rateit/example/sh/shBrushJScript.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/rateit/example/sh/shBrushXml.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/rateit/example/sh/shCore.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/rateit/example/sh/shCore.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/rateit/example/sh/shCoreDefault.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/rateit/src/delete.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/rateit/src/jquery.rateit.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/rateit/src/jquery.rateit.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/rateit/src/jquery.rateit.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/rateit/src/rateit.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/rateit/src/star.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/respond.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/simple-line-icons/License.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/simple-line-icons/Readme.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/simple-line-icons/fonts/Simple-Line-Icons.dev.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/simple-line-icons/fonts/Simple-Line-Icons.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/simple-line-icons/fonts/Simple-Line-Icons.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/simple-line-icons/fonts/Simple-Line-Icons.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/simple-line-icons/fonts/Simple-Line-Icons.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/simple-line-icons/icons-lte-ie7.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/simple-line-icons/simple-line-icons.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/simple-line-icons/simple-line-icons.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/smooth-scroll/smooth-scroll.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/uniform/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/uniform/css/uniform.default.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/uniform/css/uniform.default.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/uniform/css/uniform.default.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/uniform/images/bg-input-focus.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/uniform/images/bg-input.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/uniform/images/sprite.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/uniform/images/sprite_original.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/uniform/jquery.uniform.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/uniform/jquery.uniform.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/zoom/jquery.zoom.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/zoom/jquery.zoom.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/Banner1.psd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/Banner2.psd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/Banner3.psd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/Bx_Slider_Control.psd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/CART.psd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/CHECKOUT.psd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/CONTACTS.psd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/INDEX.psd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/INDEX_LIGHT_FOOT.psd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/Logo.psd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/MY_WISH_LIST.psd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/PRODUCT_LIST.psd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/SEARCH.psd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/SHOP_ITEM.psd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/Slider_Devices.psd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/Testimonial_Corner.psd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/css.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/logo2.psd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/logo_in.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/slide2_1_ipads.psd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/slide2_ipads.psd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/productDetail.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/addPerson.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/html.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/index1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/personList.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/productDetail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/shop-index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/shop/shop-item.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/do_an_thang_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/do_an_thang_war_exploded.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_security_2_2_10_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_config_5_2_6_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_core_5_2_6_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_web_5_2_6_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/do_an_thang.iml" beforeDir="false" afterPath="$PROJECT_DIR$/do_an_thang.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/do_an_thang/DoAnThangApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/do_an_thang/DoAnThangApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/do_an_thang/domain/ModelMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/do_an_thang/domain/ModelMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/do_an_thang/domain/data/TokenInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/do_an_thang/domain/data/TokenInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/do_an_thang/domain/entities/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/do_an_thang/domain/entities/Account.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/do_an_thang/domain/entities/type/AcountType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/do_an_thang/domain/entities/type/AccountType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/do_an_thang/domain/security/UserDetailsImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/do_an_thang/domain/security/UserDetailsImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/do_an_thang/domain/security/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/do_an_thang/domain/security/WebSecurityConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/do_an_thang/domain/security/filters/AuthJwtTokenFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/do_an_thang/domain/security/filters/AuthJwtTokenFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/do_an_thang/domain/security/filters/UnauthorizedHandlerFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/do_an_thang/domain/security/filters/UnauthorizedHandlerFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/do_an_thang/domain/services/AuthenService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/do_an_thang/domain/services/AuthenService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/do_an_thang/DoAnThangApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/do_an_thang/ServletInitializer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/do_an_thang/domain/ModelMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/do_an_thang/domain/ModelMapperImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/do_an_thang/domain/security/WebSecurityConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/do_an_thang/domain/security/filters/AuthJwtTokenFilter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/do_an_thang/domain/security/filters/UnauthorizedHandlerFilter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/do_an_thang/domain/utils/JsonParser$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/do_an_thang/domain/utils/JsonParser$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/do_an_thang/domain/utils/JsonParser.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/do_an_thang/domain/utils/JwtUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/com/example/do_an_thang/domain/ModelMapperImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/example/do_an_thang/DoAnThangApplicationTests.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,8 +550,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Enum" />
+        <option value="Interface" />
+        <option value="HTML File" />
+        <option value="CSS File" />
         <option value="Class" />
       </list>
     </option>
@@ -49,7 +572,7 @@
     <option name="myId2Visible">
       <map>
         <entry key="com.haulmont.jpb.jpaInspector" value="true" />
-        <entry key="com.haulmont.jpb.jpaPalette" value="true" />
+        <entry key="com.haulmont.jpb.jpaPalette" value="false" />
         <entry key="com.haulmont.jpb.jpaStructure" value="false" />
       </map>
     </option>
@@ -72,14 +595,17 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
     "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/home/dangnc/doan/do_an_thang/src/main/java/com/example/do_an_thang/domain/entities/type",
+    "last_opened_file_path": "/home/dangnc/Downloads/shop",
+    "list.type.of.created.stylesheet": "CSS",
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "google-java-format.settings",
     "spring.configuration.checksum": "de36555fdd873fff5a6bc4370bd8fdb3"
@@ -87,22 +613,46 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/templates/shop" />
+      <recent name="$PROJECT_DIR$/src/main/resources/static/img" />
+      <recent name="$PROJECT_DIR$/src/main/resources/static" />
+      <recent name="$PROJECT_DIR$/src/main/java/com/example/do_an_thang/domain/exceptions" />
       <recent name="$PROJECT_DIR$/src/main/java/com/example/do_an_thang/domain/entities/type" />
-      <recent name="$PROJECT_DIR$/src/main/java/com/example/do_an_thang/domain/entities" />
-      <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/static" />
+      <recent name="$PROJECT_DIR$/src/main/resources/templates" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.example.do_an_thang.domain.security.filters" />
       <recent name="com.example.do_an_thang.domain.entities.type" />
       <recent name="com.example.do_an_thang.domain.entities" />
+      <recent name="com.example.do_an_thang.domain.security.filters" />
       <recent name="com.example.do_an_thang.domain" />
       <recent name="com.example.do_an_thang.domain.utils" />
     </key>
   </component>
   <component name="RunManager">
     <configuration name="DoAnThangApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <option name="ACTIVE_PROFILES" />
+      <envs>
+        <env name="DATASOURCE_PASSWORD" value="123456789" />
+        <env name="DATASOURCE_URL" value="jdbc:mysql://127.0.0.1:3306/YOUR_DB" />
+        <env name="DATASOURCE_USERNAME" value="dev" />
+        <env name="JWT_PRIVATE_KEY" value="MIICdgIBADANBgkqhkiG9w0BAQEFAASCAmAwggJcAgEAAoGBAIMlD6/mVTQIsmXZxD6YeTObDa9WD3FnP7XgMBq9Iw7s2eUem1yzUsN14y0QgYo1OXsGBRZZFXVeut2nqXXYBKOIBJW3+np2su6TA47+Dk8LvkWF74AjrJ9vHl0c3cf+Jjzptas7XBE9KINC3dtAwlKUn5NNNEeRXdFSSghoKWh3AgMBAAECgYA3+mvVw1V/Hm83tlpj9aVWd8rBmtSArXeuZIFkCHOcfVEM0aGzUf/z2rAbnj4NBmcAsjMdtOzJ6qOM1XIqEQj5Pw9pjEy1epgq9SEugHVf8wnPJwFrGUmbpQWOey3A4mfogbikYMOVPk7iyqfMz8L4LSgij9smGtjqxfQr+DQjAQJBAM8VQpYrFfvM5rYMzwadXWcLLzGCb4D+5V/hjlbPCYRAkdSJptKILy+STB08tgXN0L/BUIgeBRmXtulDHN9kxMECQQCiH6gYi+5E7VZsv6l+f32nwiFb3rlOiNtKnmutEn7av3GiRntmnQeceY/F3UGj3kUaGsD8RbNb6GM6kOxWDOM3AkEAs1MFxmSpNNPLNfsBjAjZyVG2HHmHdX1FxDHewO2ooA4KOrK487dapSdbIjZgqcYA7wzIYBce83qduoGTjyAEAQJATn7LUY82vxK2vJKTyxaJTVc19ZhB2l9y5Y8MjVCeMOVubGZ5yvYOwFkvHlsBNAkjJf98HujUbZR3rtyKQSOeQwJAcluNJJnFEA/I+Vv7tz+Kh4CMirLSh1TiaZEAmjwTG4FKl0qgHcFMtZ7G4dAun4E/gp+Gn6zrWxYcVbqfNMfDEg==" />
+        <env name="JWT_PUBLIC_KEY" value="MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC5wKFLbRgxNkA7kRR516lTcle1I7OQzwQ7CBL+JawHxqv2wkr3HSElCxeeMZZ0EE83rqQCIig+RFBxTdQtn/25hIsY0meL72WwIi+to9b9gQMCIg8Jj2qmYjBvxraVj7UoOrKn48cr9QE3Fn+NnTSUIlhPWma75W/AUMk20mBmGQIDAQAB" />
+      </envs>
       <module name="do_an_thang" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.do_an_thang.DoAnThangApplication" />
+      <extension name="net.ashald.envfile">
+        <option name="IS_ENABLED" value="false" />
+        <option name="IS_SUBST" value="false" />
+        <option name="IS_PATH_MACRO_SUPPORTED" value="false" />
+        <option name="IS_IGNORE_MISSING_FILES" value="false" />
+        <option name="IS_ENABLE_EXPERIMENTAL_INTEGRATIONS" value="false" />
+        <ENTRIES>
+          <ENTRY IS_ENABLED="true" PARSER="runconfig" />
+        </ENTRIES>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -119,7 +669,22 @@
       <workItem from="1654927337473" duration="1125000" />
       <workItem from="1654929515682" duration="5041000" />
       <workItem from="1654974683522" duration="315000" />
-      <workItem from="1655050945830" duration="4159000" />
+      <workItem from="1655050945830" duration="4850000" />
+      <workItem from="1655056838389" duration="589000" />
+      <workItem from="1655304496865" duration="856000" />
+      <workItem from="1655384901506" duration="5500000" />
+      <workItem from="1655651285330" duration="2117000" />
+      <workItem from="1655654594590" duration="1766000" />
+      <workItem from="1655731660104" duration="3160000" />
+      <workItem from="1655802740582" duration="4142000" />
+      <workItem from="1655819847395" duration="2317000" />
+      <workItem from="1655862406112" duration="2939000" />
+      <workItem from="1655882660712" duration="152000" />
+      <workItem from="1655898776706" duration="4757000" />
+      <workItem from="1655918524080" duration="5650000" />
+      <workItem from="1655987058737" duration="13836000" />
+      <workItem from="1656045203385" duration="2764000" />
+      <workItem from="1656079154020" duration="3610000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1654974965495</created>
@@ -128,7 +693,21 @@
       <option name="project" value="LOCAL" />
       <updated>1654974965495</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="test">
+      <created>1655055185383</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1655055185383</updated>
+    </task>
+    <task id="LOCAL-00003" summary="test">
+      <created>1655055202372</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1655055202372</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -149,5 +728,25 @@
     <MESSAGE value="d" />
     <MESSAGE value="test" />
     <option name="LAST_COMMIT_MESSAGE" value="test" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/do_an_thang/domain/security/filters/AuthJwtTokenFilter.java</url>
+          <line>28</line>
+          <properties class="com.example.do_an_thang.domain.security.filters.AuthJwtTokenFilter" method="doFilterInternal">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="SpringBootApplicationConfigurationType">
+        <watch expression="((Request)((RequestFacade)this.request).request).coyoteRequest" custom="org.apache.catalina.connector.RequestFacade,org.apache.catalina.connector.Request,org.springframework.security.web.header.HeaderWriterFilter.HeaderWriterRequest,org.springframework.security.web.firewall.FirewalledRequest" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>

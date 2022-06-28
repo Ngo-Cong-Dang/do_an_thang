@@ -2,26 +2,22 @@ package com.example.do_an_thang.domain.entities;
 
 import com.example.do_an_thang.domain.dtos.AccountUpdateDTO;
 import com.example.do_an_thang.domain.entities.type.AccountState;
+import com.example.do_an_thang.domain.entities.type.AccountType;
 import com.example.do_an_thang.domain.entities.type.Gender;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.springframework.data.annotation.Id;
-import org.springframework.data.annotation.Transient;
 
-import javax.persistence.Column;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
-import javax.persistence.Table;
-import java.time.LocalDateTime;
+import javax.persistence.*;
 
 @Data
+@Entity
 @Table(name = "accounts")
 @NoArgsConstructor
 public class Account extends BaseEntity {
 
-  @Transient public static final String ACCOUNT_SEQUENCE = "account_sequence";
-
-  @Id private Integer id;
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  private Integer id;
 
   @Column(name = "username")
   private String username;
@@ -37,9 +33,6 @@ public class Account extends BaseEntity {
 
   @Column(name = "email")
   private String email;
-
-  @Column(name = "confirmed_at")
-  private LocalDateTime confirmedAt;
 
   @Column(name = "address")
   private String address;
@@ -57,7 +50,7 @@ public class Account extends BaseEntity {
 
   @Column(name = "type")
   @Enumerated(EnumType.STRING)
-  private AccountState type;
+  private AccountType type;
 
   public void from(AccountUpdateDTO dto) {
     fullName = dto.getFullName();

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"/>
+
+</head>
+<body>
+<form class="form" method="POST" th:object="${loginDto}" th:action="@{/indexs}">
+  <div class="form-login w-100">
+    <div class="phone_number email css_form">
+      <input type="text" th:field="*{username}" id="username" name="username"
+             placeholder="Username" autofocus="true"/>
+      <p id="user" class="error"></p>
+    </div>
+    <div class="password css_form">
+      <div style="position: relative">
+        <input type="password" th:field="*{password}" id="password-login" name="password"
+               placeholder="Mật khẩu"/>
+      </div>
+    </div>
+  </div>
+
+  <a class="forgot_pass text-right" href="#">Quên mật khẩu</a>
+
+  <div class="button_login">
+    <button type="submit" id="btn_login" name="btn_submit">Đăng nhập ngay</button>
+  </div>
+</form>
+</body>
+</html>

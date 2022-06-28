@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="theme-color" content="#000000"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="../static/style.css">
+    <script rel="script">
+
+
+    </script>
+    <!-- <link rel="stylesheet" href="%PUBLIC_URL%/vendors/iconfonts/font-awesome/css/all.min.css"> -->
+</head>
+<body>
+<div th:fragment="header" class="header">
+    <div class="content-header">
+        <div class="container d-flex h-100 align-items-center justify-content-between">
+            <div class="logo d-flex align-items-center">
+                <a href="">
+                    <img style="width: 100px" src="../static/img/logo_in.png" alt=""/></a>
+                <div class="category ml-4">
+                    <div class="dropdown">
+                        <div class="dropdown-toggle" id="dropdownMenuCate" data-toggle="dropdown"
+                             aria-haspopup="true" aria-expanded="false">
+                            <p>Danh mục sản phẩm</p> <i class="fal fa-angle-down"></i>
+                        </div>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuCate">
+                            <a href="" class="dropdown-item"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="search_header d-flex align-items-center">
+                <input type="text" placeholder="Tìm kiếm trên Jun Shop"/>
+                <button class="search_button">
+                    <i class="fal fa-search"></i>
+                </button>
+            </div>
+            <div class="d-flex align-items-center">
+                <!--                <User/>-->
+                <div class="cart-notice position-relative ml-4">
+                    <i class="fal fa-shopping-cart" style="font-size: 20px"></i>
+                    <span
+                            class="user_itemCount d-flex align-items-center justify-content-center position-absolute"
+                            style="
+                        width: 30px;
+                        height: 20px;
+                        border-radius: 16px;
+                        background: rgb(245, 75, 36);
+                        color: white;
+                        font-size: 12px;
+                        top: -10px;
+                        right: -24px
+                        "></span>
+                    <!--                    <QuickViewCart/>-->
+                </div>
+            </div>
+
+            <div class="user-header d-flex align-items-center">
+                <div class="icon-user-header mr-2 position-relative text-right">
+                    <div class="user-icon d-inline-block d-flex align-items-center">
+                        <div class="icon">
+                            <i class="fal fa-user"/>
+                        </div>
+                        <div class="text">
+                            <div class="d-flex">
+                                <span class="d-block" style="margin-right: 4px" data-toggle="modal"
+                                      data-target="#login_">Đăng nhập/</span><span data-toggle="modal"
+                                                                                   data-target="#signUp_">Đăng ký</span>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <p class="mb-0" style="margin-right: 6px">Tài khoản</p><i class="fal fa-chevron-down"/>
+                                <div class="hover-user position-absolute">
+                                    <div class="login-register text-center">
+                                        <p>Chào mừng bạn đến với <span style="color: #F54B24"> Jun shop !</span>
+                                        </p>
+                                        <button class="login" data-toggle="modal"
+                                                data-target="#login_">Đăng nhập
+                                        </button>
+                                        <button class="register" data-toggle="modal"
+                                                data-target="#signUp_">Đăng
+                                            ký
+                                        </button>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <i class="fal fa-bell mr-4" style="fontSize: 20px"/>
+                <i class="fal fa-shopping-cart" style="fontSize: 20px"/>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="wrapper" style="min-height: 600px">
+    <div class="container">
+        <div class="home-page">
+            <div class="banner d-flex align-items-center justify-content-center position-relative">
+                <div id="slideBanner" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img class="w-100" style="object-fit: cover"
+                                 src="https://noithatvuonggia.com/wp-content/uploads/2019/03/banner-6-1400x450-1.jpg"
+                                 alt=""/>
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#slideBanner" role="button"
+                       data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"/>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#slideBanner" role="button"
+                       data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"/>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+            <div class="product_hot">
+                <div class="title d-flex align-items-center justify-content-between">
+                    <h2>Sản phẩm nổi bật</h2>
+                    <a href="/product-hot">
+                        Xem tất cả <i class="fal fa-angle-right"></i>
+                    </a>
+                </div>
+                <div class="list_product">
+
+                    <a href="" class="card_product">
+                        <div class="images">
+                            <img src="" alt=""/>
+                        </div>
+                        <div class="content">
+                            <div class="name">
+                                Sản phẩm test
+                            </div>
+                            <div class="d-flex align-items-center mb-1 justify-content-between">
+                            <span class="sale_price">
+                                200.000 đ
+                            </span>
+                                <span class="price">
+                                300.000đ
+                            </span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="" class="card_product">
+                        <div class="images">
+                            <img src="" alt=""/>
+                        </div>
+                        <div class="content">
+                            <div class="name">
+                                Sản phẩm test
+                            </div>
+                            <div class="d-flex align-items-center mb-1 justify-content-between">
+                            <span class="sale_price">
+                                200.000 đ
+                            </span>
+                                <span class="price">
+                                300.000đ
+                            </span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="" class="card_product">
+                        <div class="images">
+                            <img src="" alt=""/>
+                        </div>
+                        <div class="content">
+                            <div class="name">
+                                Sản phẩm test
+                            </div>
+                            <div class="d-flex align-items-center mb-1 justify-content-between">
+                            <span class="sale_price">
+                                200.000 đ
+                            </span>
+                                <span class="price">
+                                300.000đ
+                            </span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="" class="card_product">
+                        <div class="images">
+                            <img src="" alt=""/>
+                        </div>
+                        <div class="content">
+                            <div class="name">
+                                Sản phẩm test
+                            </div>
+                            <div class="d-flex align-items-center mb-1 justify-content-between">
+                            <span class="sale_price">
+                                200.000 đ
+                            </span>
+                                <span class="price">
+                                300.000đ
+                            </span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="" class="card_product">
+                        <div class="images">
+                            <img src="" alt=""/>
+                        </div>
+                        <div class="content">
+                            <div class="name">
+                                Sản phẩm test
+                            </div>
+                            <div class="d-flex align-items-center mb-1 justify-content-between">
+                            <span class="sale_price">
+                                200.000 đ
+                            </span>
+                                <span class="price">
+                                300.000đ
+                            </span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="" class="card_product">
+                        <div class="images">
+                            <img src="" alt=""/>
+                        </div>
+                        <div class="content">
+                            <div class="name">
+                                Sản phẩm test
+                            </div>
+                            <div class="d-flex align-items-center mb-1 justify-content-between">
+                            <span class="sale_price">
+                                200.000 đ
+                            </span>
+                                <span class="price">
+                                300.000đ
+                            </span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="product_all">
+                <div class="title d-flex align-items-center justify-content-center">
+                    <h2>Tất cả sản phẩm</h2>
+                </div>
+                <div class="list_product">
+
+                    <a href="" class="card_product">
+                        <div class="images">
+                            <img src="" alt=""/>
+                        </div>
+                        <div class="content">
+                            <div class="name">
+                                Sản phẩm test
+                            </div>
+                            <div class="d-flex align-items-center mb-1 justify-content-between">
+                            <span class="sale_price">
+                                200.000 đ
+                            </span>
+                                <span class="price">
+                                300.000đ
+                            </span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="" class="card_product">
+                        <div class="images">
+                            <img src="" alt=""/>
+                        </div>
+                        <div class="content">
+                            <div class="name">
+                                Sản phẩm test
+                            </div>
+                            <div class="d-flex align-items-center mb-1 justify-content-between">
+                            <span class="sale_price">
+                                200.000 đ
+                            </span>
+                                <span class="price">
+                                300.000đ
+                            </span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="" class="card_product">
+                        <div class="images">
+                            <img src="" alt=""/>
+                        </div>
+                        <div class="content">
+                            <div class="name">
+                                Sản phẩm test
+                            </div>
+                            <div class="d-flex align-items-center mb-1 justify-content-between">
+                            <span class="sale_price">
+                                200.000 đ
+                            </span>
+                                <span class="price">
+                                300.000đ
+                            </span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="" class="card_product">
+                        <div class="images">
+                            <img src="" alt=""/>
+                        </div>
+                        <div class="content">
+                            <div class="name">
+                                Sản phẩm test
+                            </div>
+                            <div class="d-flex align-items-center mb-1 justify-content-between">
+                            <span class="sale_price">
+                                200.000 đ
+                            </span>
+                                <span class="price">
+                                300.000đ
+                            </span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="" class="card_product">
+                        <div class="images">
+                            <img src="" alt=""/>
+                        </div>
+                        <div class="content">
+                            <div class="name">
+                                Sản phẩm test
+                            </div>
+                            <div class="d-flex align-items-center mb-1 justify-content-between">
+                            <span class="sale_price">
+                                200.000 đ
+                            </span>
+                                <span class="price">
+                                300.000đ
+                            </span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="" class="card_product">
+                        <div class="images">
+                            <img src="" alt=""/>
+                        </div>
+                        <div class="content">
+                            <div class="name">
+                                Sản phẩm test
+                            </div>
+                            <div class="d-flex align-items-center mb-1 justify-content-between">
+                            <span class="sale_price">
+                                200.000 đ
+                            </span>
+                                <span class="price">
+                                300.000đ
+                            </span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="" class="card_product">
+                        <div class="images">
+                            <img src="" alt=""/>
+                        </div>
+                        <div class="content">
+                            <div class="name">
+                                Sản phẩm test
+                            </div>
+                            <div class="d-flex align-items-center mb-1 justify-content-between">
+                            <span class="sale_price">
+                                200.000 đ
+                            </span>
+                                <span class="price">
+                                300.000đ
+                            </span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="" class="card_product">
+                        <div class="images">
+                            <img src="" alt=""/>
+                        </div>
+                        <div class="content">
+                            <div class="name">
+                                Sản phẩm test
+                            </div>
+                            <div class="d-flex align-items-center mb-1 justify-content-between">
+                            <span class="sale_price">
+                                200.000 đ
+                            </span>
+                                <span class="price">
+                                300.000đ
+                            </span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="" class="card_product">
+                        <div class="images">
+                            <img src="" alt=""/>
+                        </div>
+                        <div class="content">
+                            <div class="name">
+                                Sản phẩm test
+                            </div>
+                            <div class="d-flex align-items-center mb-1 justify-content-between">
+                            <span class="sale_price">
+                                200.000 đ
+                            </span>
+                                <span class="price">
+                                300.000đ
+                            </span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="" class="card_product">
+                        <div class="images">
+                            <img src="" alt=""/>
+                        </div>
+                        <div class="content">
+                            <div class="name">
+                                Sản phẩm test
+                            </div>
+                            <div class="d-flex align-items-center mb-1 justify-content-between">
+                            <span class="sale_price">
+                                200.000 đ
+                            </span>
+                                <span class="price">
+                                300.000đ
+                            </span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="" class="card_product">
+                        <div class="images">
+                            <img src="" alt=""/>
+                        </div>
+                        <div class="content">
+                            <div class="name">
+                                Sản phẩm test
+                            </div>
+                            <div class="d-flex align-items-center mb-1 justify-content-between">
+                            <span class="sale_price">
+                                200.000 đ
+                            </span>
+                                <span class="price">
+                                300.000đ
+                            </span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="" class="card_product">
+                        <div class="images">
+                            <img src="" alt=""/>
+                        </div>
+                        <div class="content">
+                            <div class="name">
+                                Sản phẩm test
+                            </div>
+                            <div class="d-flex align-items-center mb-1 justify-content-between">
+                            <span class="sale_price">
+                                200.000 đ
+                            </span>
+                                <span class="price">
+                                300.000đ
+                            </span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <a href="#" class="read_more">
+                        Xem thêm
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal login_signUp" id="signUp_" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content mt-5">
+            <div class="form_login_signUp mt-5">
+                <div class="tab_login_signUp d-flex">
+                    <div class="login d-flex justify-content-center align-items-center" data-dismiss="modal"
+                         data-toggle="modal"
+                         data-target="#login_">
+                        <a href="#">Đăng nhập</a>
+                    </div>
+                    <div class="signUp active d-flex justify-content-center align-items-center">
+                        <a href="#">Đăng ký</a>
+                    </div>
+                </div>
+                <div class="title">
+                    <h3>Chào mừng bạn đến <span>Jun Shop</span>!</h3>
+                </div>
+                <div class="form">
+                    <div class="form_signUp w-100">
+                        <div class="name css_form">
+                            <input type="text" placeholder="Họ và tên"/>
+                        </div>
+                        <div class="phone_number_or_email css_form">
+                            <input placeholder="Username"/>
+                        </div>
+                        <div class="password css_form">
+                            <input type="password" placeholder="Mật khẩu"/>
+                        </div>
+                        <div class="confirm_pass css_form">
+                            <input type="password" placeholder="Xác nhận mật khẩu"/>
+                        </div>
+                        <div class="phone_number_or_email css_form">
+                            <input placeholder="Email"/>
+                        </div>
+                        <div class="text">
+                            <p>Bằng việc đăng ký, bạn đồng ý với mọi <span>
+                        </span> của Jun shop!</p>
+                        </div>
+                        <div class="bt_signUp mb-5">
+                            <button type="button">Tạo tài khoản</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal login_signUp" id="login_" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content mt-5">
+            <div class="form_login_signUp mt-5">
+                <div class="tab_login_signUp d-flex">
+                    <div class="login active d-flex justify-content-center align-items-center">
+                        <a href="#">Đăng nhập</a>
+                    </div>
+                    <div class="signUp d-flex justify-content-center align-items-center" data-dismiss="modal"
+                         data-toggle="modal"
+                         data-target="#signUp_">
+                        <a href="#">Đăng ký</a>
+                    </div>
+                </div>
+                <div class="title">
+                    <h3>Chào mừng bạn đến <span>Jun Shop</span>!</h3>
+                </div>
+                <div class="form">
+                    <div class="form-login w-100">
+                        <div class="phone_number email css_form">
+                            <input type="text" id="username" name="username"
+                                   placeholder="Username"/>
+                            <p id="user" class="error"></p>
+                        </div>
+                        <div class="password css_form">
+                            <div style="position: relative">
+                                <input type="text" id="password-login" name="password" placeholder="Mật khẩu"/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a class="forgot_pass text-right" href="#">Quên mật khẩu</a>
+
+                    <div class="button_login">
+                        <button type="button" id="btn_login" name="btn_submit">Đăng nhập ngay</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="footer">
+    <div class="container d-flex justify-content-between pt-5">
+        <div>
+            <p class="text-white">Số điện thoại: 0383630495</p>
+            <p class="text-white">Đia chỉ: 200 Nguyễn Khang</p>
+            <p class="text-white">Jun Shop thời trang thỏa sức mua sắm</p>
+        </div>
+        <div class="text-right">
+            <p class="text-white">Đăng ký ngay để nhận thêm ưu đãi từ Jun shop</p>
+            <button>Đăng ký</button>
+        </div>
+    </div>
+</div><!---->
+
+</body>
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="%PUBLIC_URL%/vendors/js/vendor.bundle.base.js"></script>
+<script src="%PUBLIC_URL%/vendors/js/vendor.bundle.addons.js"></script>
+</html>

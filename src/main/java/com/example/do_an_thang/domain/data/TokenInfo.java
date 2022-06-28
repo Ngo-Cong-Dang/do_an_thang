@@ -1,6 +1,6 @@
 package com.example.do_an_thang.domain.data;
 
-import com.example.do_an_thang.domain.entities.type.AcountType;
+import com.example.do_an_thang.domain.entities.type.AccountType;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
@@ -9,5 +9,5 @@ import lombok.Data;
 public class TokenInfo {
   private Integer id;
   private String username;
-  private AcountType type;
+  private AccountType type;
 }
